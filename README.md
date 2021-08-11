@@ -43,13 +43,13 @@ Neovim >= 0.5 (extmarks)
    <summary>or in lua (includes supertab-like functionality with nvim-compe)</summary>
  
     ```lua
-    local function prequire(...)
+    local function require(...)
     local status, lib = pcall(require, ...)
     if (status) then return lib end
         return nil
     end
 
-    local luasnip = prequire('luasnip')
+    local luasnip = require('luasnip')
 
     local t = function(str)
         return vim.api.nvim_replace_termcodes(str, true, true, true)
